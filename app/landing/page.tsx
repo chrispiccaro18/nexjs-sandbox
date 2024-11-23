@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import PlayTimeHeader from '@/components/header'
 
 export default function Home() {
   const [selectedTime, setSelectedTime] = useState('');
@@ -27,16 +28,10 @@ export default function Home() {
     : activities;
 
   return (
-    <div className="container mx-auto p-4">
-      {/* Header */}
-      <header className="flex justify-between items-center py-4">
-        <h1 className="text-2xl font-bold">Play Time</h1>
-        <div>
-          <button className="text-sm mr-2">Log In</button>
-          <button className="text-sm">Sign Up</button>
-        </div>
-      </header>
-
+    <div 
+      className="container mx-auto p-4"
+    >
+      <PlayTimeHeader />
       {/* Search and Filter */}
       <div className="py-4">
         <h2 className="text-xl font-semibold mb-2">Let's Play For:</h2>

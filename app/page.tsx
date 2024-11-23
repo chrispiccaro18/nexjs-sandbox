@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Search from "@/components/search";
 
-import './globals.css';
-
 export default function Page() {
     return (
       <>
