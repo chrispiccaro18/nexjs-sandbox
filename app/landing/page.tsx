@@ -2,29 +2,14 @@
 
 import { useState } from 'react';
 import PlayTimeHeader from '@/components/header'
+import activities from '../../activities';
+import PromptSearchBar from '@/components/PromptSearchBar';
 
 export default function Home() {
-  const [selectedTime, setSelectedTime] = useState('');
-
-  const activities = [
-    {
-      title: 'Activity 1',
-      time: '10 min',
-      age: 'Preschool - Kindergarten',
-      materials: 'Paper, Markers',
-      img: '/path-to-image1.jpg',
-    },
-    {
-      title: 'Activity 2',
-      time: '5 min',
-      age: 'Infant',
-      materials: 'Pencil, Notes',
-      img: '/path-to-image2.jpg',
-    },
-  ];
+  const [selectedTime, setSelectedTime] = useState(0);
 
   const filteredActivities = selectedTime
-    ? activities.filter((activity) => activity.time.includes(selectedTime))
+    ? activities.filter((activity) => activity.estimatedTime === selectedTime)
     : activities;
 
   return (
@@ -34,9 +19,9 @@ export default function Home() {
       <PlayTimeHeader />
       {/* Search and Filter */}
       <div className="py-4">
-        <h2 className="text-xl font-semibold mb-2">Let's Play For:</h2>
-        <div className="flex space-x-4">
-          {['10 min', '15 min', '20 min', '30 min'].map((time) => (
+        <PromptSearchBar />
+        {/* <div className="flex space-x-4">
+          {[10, 15, 20, 30].map((time) => (
             <button
               key={time}
               className={`px-4 py-2 rounded-lg ${
@@ -46,10 +31,10 @@ export default function Home() {
               }`}
               onClick={() => setSelectedTime(time)}
             >
-              {time}
+              {time} mins
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Activity List */}
@@ -59,16 +44,14 @@ export default function Home() {
             key={index}
             className="flex border p-4 rounded-lg shadow-lg items-center"
           >
-            <img
-              src={activity.img}
-              alt={activity.title}
-              className="w-24 h-24 object-cover rounded-lg"
-            />
             <div className="ml-4">
               <h3 className="text-lg font-bold">{activity.title}</h3>
-              <p className="text-sm">Time: {activity.time}</p>
-              <p className="text-sm">Age: {activity.age}</p>
-              <p className="text-sm">Materials: {activity.materials}</p>
+              <p className="text-sm">Time: {activity.estimatedTime}</p>
+              <p className="text-sm">Age: {activity.ageRange}</p>
+              <p className="text-sm">Materials: {activity.materials
+                .reduce((materialsString, material) => (
+                  materialsString ? materialsString + ', ' + material : material
+                ), '')}</p>
             </div>
             <button className="ml-auto px-4 py-2 bg-green-500 text-white rounded-lg">
               Print
