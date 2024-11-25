@@ -1,11 +1,8 @@
 import React from "react";
 import { top5 } from '../../activities';
 
-const top5Stringified = top5.map((attribute) => (
-  typeof attribute === 'string' ? attribute : `${attribute} mins`
-))
-
 const PromptSearchBar = () => {
+
   return (
     <div className="flex items-center space-x-4 p-4 rounded-lg bg-neon-blue-300 shadow-md">
       <p className="text-lg font-semibold text-salmon-pink">Let's Play with:</p>
@@ -17,12 +14,13 @@ const PromptSearchBar = () => {
         />
       </div>
       <div>
-        {top5Stringified.map((attribute) => (
-          <button
-          key={attribute}
+        {top5.map((attribute) => {
+          const [key, value] = Object.entries(attribute)[0];
+          return <button
+          key={value}
           className="px-4 py-2 mr-2 rounded-lg secondary-btn"
-          >{attribute}</button>
-        ))}
+          >{value}</button>
+        })}
       </div>
     </div>
   );

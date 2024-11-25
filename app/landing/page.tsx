@@ -6,11 +6,26 @@ import activities from '../../activities';
 import PromptSearchBar from '@/components/PromptSearchBar';
 
 export default function Home() {
-  const [selectedTime, setSelectedTime] = useState(0);
+  const [selectedAttributes, setSelectedAtributes] = useState([{ estimatedTime: '15 mins' }]);
+  const [isButtonActive, setIsButtonActive] = useState(false);
 
-  const filteredActivities = selectedTime
-    ? activities.filter((activity) => activity.estimatedTime === selectedTime)
-    : activities;
+  const handleButtonToggle = (isActive: boolean) => {
+    setIsButtonActive(isActive);
+  }
+
+  // const filteredActivities = selectedAttributes.map((attribute) => {
+  //   const [key, value] = Object.entries(attribute)[0];
+  //   console.log(key, value)
+  //   return activities.filter((activity) => {
+  //     activity[key] === value;
+  //   })
+  // });
+
+  // console.log(filteredActivities)
+    // ? activities.filter((activity) => activity.estimatedTime === selectedTime)
+    // : activities;
+  
+  const filteredActivities = activities;
 
   return (
     <div 

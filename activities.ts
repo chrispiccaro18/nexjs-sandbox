@@ -10,7 +10,7 @@
 //     | 'School Age'; // Age group
 //   instructions: string; // Detailed activity instructions
 //   tags?: string[]; // Optional tags for categorization
-//   estimatedTime: number; // Estimated time in minutes
+//   estimatedTime: string; // Estimated time in minutes
 // }
 
 export default [
@@ -20,7 +20,7 @@ export default [
     ageRange: "Toddler",
     instructions: "Place colored bowls on a table and have your toddler sort matching colored paper into the corresponding bowl.",
     tags: ["Sorting", "Colors", "Fine Motor Skills"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "Finger Painting Fun",
@@ -28,7 +28,7 @@ export default [
     ageRange: "Preschooler",
     instructions: "Provide paper and finger paints, encouraging kids to create artwork with their fingers.",
     tags: ["Art", "Creativity"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Bubble Wrap Stomp",
@@ -36,7 +36,7 @@ export default [
     ageRange: "Toddler",
     instructions: "Lay bubble wrap on the floor and let your toddler stomp to pop the bubbles.",
     tags: ["Sensory", "Gross Motor Skills"],
-    estimatedTime: 5,
+    estimatedTime: "5 mins",
   },
   {
     title: "Storytime Adventure",
@@ -44,7 +44,7 @@ export default [
     ageRange: "Infant",
     instructions: "Read a short story aloud, using animated voices and pointing to pictures.",
     tags: ["Literacy", "Bonding"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "Build a Blanket Fort",
@@ -52,7 +52,7 @@ export default [
     ageRange: "School Age",
     instructions: "Help your child build a fort using chairs, cushions, and blankets for a fun play area.",
     tags: ["Imagination", "Indoor Fun"],
-    estimatedTime: 20,
+    estimatedTime: "20 mins",
   },
   {
     title: "Treasure Hunt",
@@ -60,7 +60,7 @@ export default [
     ageRange: "School Age",
     instructions: "Hide toys around the house and create clues for your child to find them.",
     tags: ["Problem-Solving", "Adventure"],
-    estimatedTime: 30,
+    estimatedTime: "30 mins",
   },
   {
     title: "Shape Puzzle",
@@ -68,7 +68,7 @@ export default [
     ageRange: "Preschooler",
     instructions: "Draw shapes on cardboard, cut them out, and have the child match them back to their outlines.",
     tags: ["Shapes", "Puzzles"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Nature Walk Bingo",
@@ -76,7 +76,7 @@ export default [
     ageRange: "Kindergarten",
     instructions: "Create a bingo card with items like leaves, flowers, or rocks. Take a walk and check off what they find.",
     tags: ["Outdoor", "Observation"],
-    estimatedTime: 30,
+    estimatedTime: "30 mins",
   },
   {
     title: "Dance Party",
@@ -84,7 +84,7 @@ export default [
     ageRange: "Infant",
     instructions: "Play music and move along with your baby to encourage sensory and motor development.",
     tags: ["Music", "Bonding"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "Alphabet Hunt",
@@ -92,7 +92,7 @@ export default [
     ageRange: "Preschooler",
     instructions: "Hide plastic letters around the room and ask your child to find them and name the letters.",
     tags: ["Letters", "Movement"],
-    estimatedTime: 20,
+    estimatedTime: "20 mins",
   },
   {
     title: "Playdough Creations",
@@ -100,7 +100,7 @@ export default [
     ageRange: "Kindergarten",
     instructions: "Use playdough and utensils to create shapes, animals, or pretend food.",
     tags: ["Creativity", "Sensory"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Cardboard Car Ramp",
@@ -108,7 +108,7 @@ export default [
     ageRange: "Toddler",
     instructions: "Make a ramp with a cardboard box and roll toy cars down it.",
     tags: ["Engineering", "Fun"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "DIY Musical Instruments",
@@ -116,7 +116,7 @@ export default [
     ageRange: "School Age",
     instructions: "Create simple instruments using cans and rubber bands to make different sounds.",
     tags: ["Music", "STEM"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Counting Jars",
@@ -124,7 +124,7 @@ export default [
     ageRange: "Preschooler",
     instructions: "Fill jars with different numbers of buttons and practice counting with your child.",
     tags: ["Math", "Fine Motor Skills"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Animal Yoga",
@@ -132,7 +132,7 @@ export default [
     ageRange: "Kindergarten",
     instructions: "Teach simple yoga poses and name them after animals, like 'cat' or 'downward dog.'",
     tags: ["Movement", "Mindfulness"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Ice Cube Painting",
@@ -140,7 +140,7 @@ export default [
     ageRange: "Toddler",
     instructions: "Color ice cubes with food coloring and let the child paint on paper as they melt.",
     tags: ["Art", "Sensory"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "Memory Match",
@@ -148,7 +148,7 @@ export default [
     ageRange: "Kindergarten",
     instructions: "Lay cards face down and take turns flipping two at a time to find a match.",
     tags: ["Cognitive Skills", "Games"],
-    estimatedTime: 20,
+    estimatedTime: "20 mins",
   },
   {
     title: "Shadow Tracing",
@@ -156,7 +156,7 @@ export default [
     ageRange: "School Age",
     instructions: "Place objects under light to cast shadows and trace their outlines on paper.",
     tags: ["Art", "Science"],
-    estimatedTime: 15,
+    estimatedTime: "15 mins",
   },
   {
     title: "Sorting Shapes and Colors",
@@ -164,7 +164,7 @@ export default [
     ageRange: "Toddler",
     instructions: "Sort shapes by type and color into matching groups.",
     tags: ["Shapes", "Colors"],
-    estimatedTime: 10,
+    estimatedTime: "10 mins",
   },
   {
     title: "DIY Bird Feeder",
@@ -172,8 +172,14 @@ export default [
     ageRange: "Kindergarten",
     instructions: "Spread peanut butter on pinecones, roll them in birdseed, and hang them outside for birds.",
     tags: ["Outdoor", "Craft"],
-    estimatedTime: 20,
+    estimatedTime: "20 mins",
   }
 ];
 
-export const top5 = ['Paper', 15, 'Toddler', 'Kindergarten', 'Art'];
+export const top5 = [
+  { materials: 'Paper' },
+  { estimatedTime: '15 mins' },
+  { ageRange: 'Toddler' },
+  { ageRange: 'Kindergarten' },
+  { tags: 'Art' }
+];
